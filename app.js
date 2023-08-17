@@ -1,6 +1,7 @@
 
 const contractAddress='0x62d92ea2573702f69d62cffe28395120b8bd2cd1';
 
+//ABI: collection of functions and data structures that the smart contract exposes to the outside world
 const contractABI=[
 	{
 		"inputs": [
@@ -159,32 +160,29 @@ const contractABI=[
 ];
 
 async function main() {
-	// Check if the Ethereum provider (MetaMask) is available
+	// Checking if the Ethereum provider (MetaMask) is available
 	if (typeof window.ethereum !== 'undefined') {
-	  // Request Metamask to enable accounts
+	  // Requesting Metamask to enable accounts
 	  await window.ethereum.enable();
   
-	  // Get the selected account
 	  const accounts = await window.ethereum.request({ method: 'eth_accounts' });
 	  const userAccount = accounts[0];
   
-	  // Create an instance of the contract
+	  // Creating an instance of the contract deployed on Sepolia TestNet
 	  const web3 = new Web3(window.ethereum); // Create a web3 instance
 	  const loyaltyContract = new web3.eth.Contract(contractABI, contractAddress);
   
-	  // Display program name and user points
+	  // Displaying program name and user points
 	  displayProgramName(loyaltyContract);
 	  displayUserPoints(loyaltyContract, userAccount);
   
-	  // Add event listeners to buttons
+	  // Adding event listeners to buttons
 	  document.getElementById('earnButton').addEventListener('click', () => earnPoints(loyaltyContract, userAccount));
 	  document.getElementById('redeemButton').addEventListener('click', () => redeemPoints(loyaltyContract, userAccount));
 	} else {
 	  console.log('MetaMask not detected. Please install the MetaMask extension.');
 	}
   }
-  
-  // The rest of your functions (displayProgramName, displayUserPoints, earnPoints, redeemPoints)
   
 async function displayProgramName(contract) {
 	console.log(contract)
@@ -212,6 +210,5 @@ async function  updateProgramName(contract, user) {
     displayUserPoints(contract, user);
 }
 
-  
-  // Call the main function to start the application
+
   main();

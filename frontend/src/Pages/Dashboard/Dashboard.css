@@ -1,0 +1,142 @@
+/* Dashboard container */
+.dashboard {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  .dashboard header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .dashboard header p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Payment history table */
+  .dashboard .transaction-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard .transaction-history h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard .transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .dashboard .transaction-history th,
+  .dashboard .transaction-history td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dashboard .transaction-history th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .dashboard .transaction-history tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Hover effect on table rows */
+  .dashboard .transaction-history tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Style for amount column */
+  .dashboard .transaction-history td:nth-child(2) {
+    font-weight: bold;
+  }
+  
+  /* Negative transaction text color */
+  .dashboard .transaction-history tr.negative {
+    color: red;
+  }
+  
+  /* Positive transaction text color */
+  .dashboard .transaction-history tr.positive {
+    color: green;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .dashboard {
+      padding: 10px;
+    }
+    .dashboard header h1 {
+      font-size: 20px;
+    }
+    .dashboard header p {
+      font-size: 14px;
+    }
+    .dashboard .transaction-history h2 {
+      font-size: 18px;
+    }
+    .dashboard .transaction-history th,
+    .dashboard .transaction-history td {
+      padding: 8px;
+    }
+  }
+  
+
+
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336; /* Red color for the button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the button on hover */
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red color on hover */
+}
+
+.content{
+  text-align: center;
+}
+
+/* Apply margin to the right of the "Earn Points" button */
+#earnButton {
+  margin-right: 10px; /* Adjust the value as needed */
+  align-items: center;
+}
+
+/* Apply margin to the left of the "Redeem Points" button */
+#redeemButton {
+  margin-left: 10px; 
+  align-items: center;/* Adjust the value as needed */
+}
+.bold{
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 40px;
+}

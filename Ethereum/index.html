@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loyalty Program</title>
+  <script src="https://cdn.jsdelivr.net/npm/@metamask/dapp@1.2.0/dist/metamask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>EARNIFY</h1>
+    </header>
+
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Earn</a></li>
+        <li><a href="#">Redeem</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Loyalty Program</h1>
+      <p>Program Name: <span id="programName"></span></p>
+      <p>Your Points: <span id="userPoints"></span></p>
+      <button id="earnButton" onclick="earnPoints()">Earn Points</button>
+      <button id="redeemButton" onclick="redeemPoints()">Redeem Points</button>
+      <div class="content">
+        <div class="card">
+          <h2>Widget 1</h2>
+          <p>Content for Widget 1 goes here.</p>
+        </div>
+
+        <div class="card">
+          <h2>Widget 2</h2>
+          <p>Content for Widget 2 goes here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
